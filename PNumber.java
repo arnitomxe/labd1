@@ -1,5 +1,6 @@
 import java.util.Set;
 import java.util.HashSet;
+import static java.lang.Math.sqrt;
 
 public class PNumber {
 
@@ -10,7 +11,7 @@ public class PNumber {
 	//divisor list generator
 	public static Set<Integer> divisors(int n) {
 		HashSet<Integer> divisors = new HashSet<Integer>();
-		for (int i=1;i<n;i++) {
+		for (int i=1;i<= sqrt(n);i++) {
 			if(isDivisor(n,i)) {
 				divisors.add(i);
 				divisors.add(n/i);
